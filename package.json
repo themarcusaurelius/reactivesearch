@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@appbaseio/reactivemaps": "^3.0.0-beta.4",
+    "@appbaseio/reactivesearch": "^3.4.1",
     "concurrently": "^4.1.1",
+    "cross-env": "^7.0.0",
     "electron": "^6.0.1",
     "electron-builder": "^21.2.0",
     "electron-is-dev": "^1.1.0",
@@ -17,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "main": "public/electron.js",
   "eslintConfig": {
